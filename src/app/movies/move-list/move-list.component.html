@@ -1,0 +1,6 @@
+<div>
+    <app-page-header [pageHeader]="'List of movies'"></app-page-header>
+    <ul *ngIf="movies$ | async as movies">
+        <li *ngFor="let movie of movies?.data">Test</li>
+    </ul>
+</div>

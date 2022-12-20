@@ -1,0 +1,78 @@
+<div>
+    <h3>User Details</h3>
+    <form [formGroup]="userForm" (submit)="$event.preventDefault()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name"
+                        formControlName="firstName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" placeholder="Middle Name" formControlName="middleName"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" formControlName="lastName" placeholder="Last Name"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" formControlName="email" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" formControlName="password" placeholder="Password"
+                        class="form-control">
+                </div>
+            </div>
+
+            <div class="col-md-6" formGroupName="address">
+                <div class="form-group">
+                    <label for="house">House Name</label>
+                    <input type="test" id="house" formControlName="house"
+                    class="form-control"
+                    placeholder="House Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street</label>
+                    <input type="test" id="street" formControlName="street"
+                    class="form-control"
+                    placeholder="Street Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="landmark">Landmark</label>
+                    <input type="test" id="street" formControlName="landmark"
+                    class="form-control"
+                    placeholder="Landmark"/>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="test" id="state" formControlName="state"
+                    class="form-control"
+                    placeholder="State"/>
+                </div>
+                <div class="form-group">
+                    <label for="pin">Pin</label>
+                    <input type="test" id="pin" formControlName="pin"
+                    class="form-control"
+                    placeholder="Pin code"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="test" id="country" formControlName="country"
+                    class="form-control"
+                    placeholder="Country Name"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-button">
+            <button class="btn btn-primary" (click)="addUser()">Submit</button>
+            <button class="btn btn-secondary" (click)="restForm()">Reset</button>
+        </div>
+
+    </form>
+</div>
